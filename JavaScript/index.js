@@ -1,6 +1,6 @@
 //Los Angeles
 
-function displayTimeAndDateLA() {
+function updateTime() {
   let losAngelesElement = document.querySelector("#los-angeles");
   // let losAngelesDateElement = document.querySelector("#los-angeles .date");
   let losAngelesDateElement = losAngelesElement.querySelector(".date");
@@ -10,21 +10,19 @@ function displayTimeAndDateLA() {
     .format("MMMM Do, YYYY");
   losAngelesTimeElement.innerHTML = moment()
     .tz("America/Los_Angeles")
-    .format("hh:mm:ss A");
-}
+    .format("h:mm:ss [<small>]A[</small>]");
 
-displayTimeAndDateLA();
-setInterval(displayTimeAndDateLA, 1000);
-
-//Tokyo
-
-function displayTimeAndDateTokyo() {
+  //Tokyo
   let tokyoElement = document.querySelector("#tokyo");
   let tokyoDateElement = tokyoElement.querySelector(".date");
   let tokyoTimeElement = tokyoElement.querySelector(".time");
-  tokyoDateElement.innerHTML = moment().tz("Asia/Tokyo").format("MMMM Do, YYYY");
-  tokyoTimeElement.innerHTML = moment().tz("Asia/Tokyo").format("hh:mm:ss A");
+  tokyoDateElement.innerHTML = moment()
+    .tz("Asia/Tokyo")
+    .format("MMMM Do, YYYY");
+  tokyoTimeElement.innerHTML = moment()
+    .tz("Asia/Tokyo")
+    .format("h:mm:ss [<small>]A[</small>]");
 }
 
-displayTimeAndDateTokyo();
-setInterval(displayTimeAndDateTokyo, 1000);
+updateTime();
+setInterval(updateTime, 1000);
