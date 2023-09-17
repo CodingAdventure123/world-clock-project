@@ -26,6 +26,19 @@ function updateTime() {
       .tz("Asia/Tokyo")
       .format("h:mm:ss [<small>]A[</small>]");
   }
+
+  //Palermo
+  let palermoElement = document.querySelector("#palermo");
+  if (palermoElement) {
+    let palermoDateElement = palermoElement.querySelector(".date");
+    let palermoTimeElement = palermoElement.querySelector(".time");
+    palermoDateElement.innerHTML = moment()
+      .tz("Europe/Rome")
+      .format("MMMM Do, YYYY");
+    palermoTimeElement.innerHTML = moment()
+      .tz("Europe/Rome")
+      .format("h:mm:ss [<small>]A[</small>]");
+  }
 }
 
 function updateCity(event) {

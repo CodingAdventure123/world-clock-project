@@ -30,6 +30,10 @@ a {
   color: black;
 }
 
+.githubLink {
+  text-decoration: underline;
+}
+
 select {
   display: center;
   width: 100%;
