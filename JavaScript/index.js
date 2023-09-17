@@ -45,6 +45,7 @@ function updateCity(event) {
     "A"
   )}</small></div>
   </div>
+  <a class="linkCities" href="/">Back to all cities</a>
   `;
 }
 
